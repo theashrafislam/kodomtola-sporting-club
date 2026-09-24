@@ -15,10 +15,10 @@ const tournamentConfig = {
     startTime: "2026-09-25T15:00:00+06:00",
 
     date: "২৫ সেপ্টেম্বর ২০২৬",
-    time: "সন্ধ্যা ৩:০০টা",
+    time: "বিকাল ৩:০০টা",
     venue: "সোনাপুর বলাকা যুবক সংঘ",
 
-    matchInfo: "ডাবল বিল — বিশেষ টুর্নামেন্ট ম্যাচ",
+    matchInfo: "ডাবল বাইক বিশেষ টুর্নামেন্ট",
 
     facebookUrl: "https://www.facebook.com/profile.php?id=100091457432901",
 

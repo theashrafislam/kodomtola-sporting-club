@@ -39,30 +39,44 @@ const CountdownBox = ({ value, label }) => {
     return (
         <div
             className="
-                flex min-w-0 flex-1 flex-col items-center
+                flex
+                min-w-0
+                flex-1
+                flex-col
+                items-center
                 justify-center
                 rounded-xl
-                border border-white/10
+                border
+                border-white/10
                 bg-white/[0.07]
-                px-1.5 py-2
+                px-1.5
+                py-2
                 backdrop-blur-md
                 transition
                 duration-300
                 hover:bg-white/[0.1]
+
                 sm:rounded-2xl
-                sm:px-3 sm:py-3
-                md:px-4 md:py-4
+                sm:px-3
+                sm:py-3
+
+                md:px-4
+                md:py-4
             "
         >
             <span
                 className="
+                    whitespace-nowrap
                     text-lg
                     font-black
                     leading-none
                     tracking-tight
                     text-white
+
                     sm:text-2xl
+
                     md:text-3xl
+
                     lg:text-4xl
                 "
             >
@@ -72,11 +86,14 @@ const CountdownBox = ({ value, label }) => {
             <span
                 className="
                     mt-1
+                    whitespace-nowrap
                     text-[8px]
                     font-semibold
                     tracking-wider
                     text-white/40
+
                     sm:text-[10px]
+
                     md:text-xs
                 "
             >
@@ -93,7 +110,8 @@ const CountdownTimer = ({ targetTime }) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            const remaining = calculateTimeLeft(targetTime);
+            const remaining =
+                calculateTimeLeft(targetTime);
 
             setTimeLeft(remaining);
 
@@ -105,25 +123,33 @@ const CountdownTimer = ({ targetTime }) => {
         return () => clearInterval(interval);
     }, [targetTime]);
 
+    /* Match Started */
     if (!timeLeft) {
         return (
             <div
                 className="
+                    w-full
                     rounded-xl
-                    border border-amber-400/20
+                    border
+                    border-amber-400/20
                     bg-amber-400/10
-                    px-4 py-3
+                    px-4
+                    py-3
                     text-center
                     backdrop-blur-md
+
                     sm:rounded-2xl
-                    sm:px-6 sm:py-4
+                    sm:px-6
+                    sm:py-4
                 "
             >
                 <p
                     className="
                         text-lg
                         font-black
+                        leading-tight
                         text-amber-300
+
                         sm:text-2xl
                     "
                 >
@@ -137,9 +163,12 @@ const CountdownTimer = ({ targetTime }) => {
         <div
             className="
                 grid
+                w-full
                 grid-cols-4
                 gap-1.5
+
                 sm:gap-2
+
                 md:gap-3
             "
         >

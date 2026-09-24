@@ -1,7 +1,4 @@
-import {
-    FiArrowDown,
-    FiZap,
-} from "react-icons/fi";
+import { FiZap } from "react-icons/fi";
 
 import ClubMatchup from "./ClubMatchup";
 import CountdownTimer from "./CountdownTimer";
@@ -13,14 +10,17 @@ const ComingSoonHero = ({ config }) => {
         <main
             className="
                 relative
-                h-dvh
+                min-h-screen
                 w-full
-                overflow-hidden
+                overflow-x-hidden
+                overflow-y-auto
                 bg-[#061118]
                 text-white
             "
         >
-            {/* Background */}
+            {/* =========================
+                BACKGROUND
+            ========================== */}
             <div
                 aria-hidden="true"
                 className="
@@ -30,6 +30,7 @@ const ComingSoonHero = ({ config }) => {
                     overflow-hidden
                 "
             >
+                {/* Teal Glow */}
                 <div
                     className="
                         absolute
@@ -46,6 +47,7 @@ const ComingSoonHero = ({ config }) => {
                     "
                 />
 
+                {/* Amber Glow */}
                 <div
                     className="
                         absolute
@@ -62,7 +64,7 @@ const ComingSoonHero = ({ config }) => {
                     "
                 />
 
-                {/* Grid pattern */}
+                {/* Grid Pattern */}
                 <div
                     className="
                         absolute
@@ -77,36 +79,42 @@ const ComingSoonHero = ({ config }) => {
                 />
             </div>
 
-            {/* Main Container */}
+            {/* =========================
+                MAIN CONTAINER
+            ========================== */}
             <div
                 className="
                     relative
                     mx-auto
                     flex
-                    h-full
+                    min-h-screen
                     w-full
                     max-w-6xl
                     flex-col
                     px-3
-                    py-3
+                    py-4
 
                     sm:px-5
-                    sm:py-4
+                    sm:py-5
 
                     md:px-7
-                    md:py-5
+                    md:py-6
 
                     lg:px-8
-                    lg:py-5
+                    lg:py-6
                 "
             >
-                {/* HEADER */}
+                {/* =========================
+                    HEADER
+                ========================== */}
                 <header
                     className="
                         flex
+                        w-full
                         shrink-0
                         items-center
                         justify-between
+                        gap-3
                     "
                 >
                     {/* Club Brand */}
@@ -116,9 +124,11 @@ const ComingSoonHero = ({ config }) => {
                             min-w-0
                             items-center
                             gap-2
+
                             sm:gap-3
                         "
                     >
+                        {/* Logo */}
                         <div
                             className="
                                 flex
@@ -128,7 +138,8 @@ const ComingSoonHero = ({ config }) => {
                                 items-center
                                 justify-center
                                 rounded-lg
-                                border border-white/10
+                                border
+                                border-white/10
                                 bg-white/5
                                 p-1.5
                                 backdrop-blur-md
@@ -150,15 +161,18 @@ const ComingSoonHero = ({ config }) => {
                             />
                         </div>
 
+                        {/* Club Name */}
                         <div className="min-w-0">
                             <p
                                 className="
+                                    max-w-[150px]
                                     truncate
                                     text-[10px]
                                     font-black
                                     tracking-tight
                                     text-white
 
+                                    sm:max-w-[220px]
                                     sm:text-sm
                                 "
                             >
@@ -190,7 +204,8 @@ const ComingSoonHero = ({ config }) => {
                             items-center
                             gap-1.5
                             rounded-full
-                            border border-amber-400/20
+                            border
+                            border-amber-400/20
                             bg-amber-400/10
                             px-2.5
                             py-1
@@ -200,7 +215,17 @@ const ComingSoonHero = ({ config }) => {
                             sm:py-1.5
                         "
                     >
-                        <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
+                        <span
+                            className="
+                                relative
+                                flex
+                                h-1.5
+                                w-1.5
+
+                                sm:h-2
+                                sm:w-2
+                            "
+                        >
                             <span
                                 className="
                                     absolute
@@ -231,6 +256,7 @@ const ComingSoonHero = ({ config }) => {
 
                         <span
                             className="
+                                whitespace-nowrap
                                 text-[8px]
                                 font-bold
                                 uppercase
@@ -246,14 +272,20 @@ const ComingSoonHero = ({ config }) => {
                     </div>
                 </header>
 
-                {/* CENTER CONTENT */}
+                {/* =========================
+                    MAIN CONTENT
+                ========================== */}
                 <section
                     className="
                         flex
-                        min-h-0
                         flex-1
                         items-center
                         justify-center
+                        py-8
+
+                        sm:py-10
+
+                        md:py-12
                     "
                 >
                     <div
@@ -265,13 +297,14 @@ const ComingSoonHero = ({ config }) => {
                         {/* Eyebrow */}
                         <div
                             className="
-                                mb-1.5
+                                mb-2
                                 flex
                                 items-center
                                 justify-center
                                 gap-1.5
 
-                                sm:mb-2
+                                sm:mb-3
+                                sm:gap-2
                             "
                         >
                             <FiZap
@@ -303,6 +336,7 @@ const ComingSoonHero = ({ config }) => {
                         <div className="mx-auto text-center">
                             <h1
                                 className="
+                                    px-1
                                     text-2xl
                                     font-black
                                     leading-[1.08]
@@ -326,7 +360,7 @@ const ComingSoonHero = ({ config }) => {
                                         text-transparent
                                     "
                                 >
-                                    ডাবল বিল
+                                    ডাবল বাইক
                                 </span>{" "}
                                 টুর্নামেন্ট
                             </h1>
@@ -334,8 +368,9 @@ const ComingSoonHero = ({ config }) => {
                             <p
                                 className="
                                     mx-auto
-                                    mt-1.5
+                                    mt-2
                                     max-w-xl
+                                    px-2
                                     text-[10px]
                                     leading-4
                                     text-white/50
@@ -350,27 +385,25 @@ const ComingSoonHero = ({ config }) => {
                                 আমাদের সাথে{" "}
                                 <span className="font-bold text-white/80">
                                     {config.opponentClub.name}
-                                </span>
-                                -এর জমজমাট ডাবল বিল
-                                টুর্নামেন্ট।
+                                </span>{" "}
+                                -এর জমজমাট ডাবল বাইক টুর্নামেন্ট।
                             </p>
                         </div>
 
-                        {/* MATCHUP */}
+                        {/* Matchup */}
                         <div
                             className="
-                                mt-4
+                                mt-5
+                                w-full
 
-                                sm:mt-5
+                                sm:mt-6
 
-                                md:mt-6
+                                md:mt-7
                             "
                         >
                             <ClubMatchup
                                 homeClub={config.homeClub}
-                                opponentClub={
-                                    config.opponentClub
-                                }
+                                opponentClub={config.opponentClub}
                             />
                         </div>
 
@@ -385,8 +418,10 @@ const ComingSoonHero = ({ config }) => {
                         >
                             <p
                                 className="
+                                    px-2
                                     text-[9px]
                                     font-medium
+                                    leading-4
                                     text-white/30
 
                                     sm:text-xs
@@ -396,17 +431,25 @@ const ComingSoonHero = ({ config }) => {
                             </p>
                         </div>
 
-                        {/* COUNTDOWN */}
+                        {/* Countdown */}
                         <div
                             className="
                                 mx-auto
-                                mt-2.5
+                                mt-3
+                                w-full
                                 max-w-lg
 
-                                sm:mt-3
+                                sm:mt-4
                             "
                         >
-                            <div className="mb-1.5 text-center sm:mb-2">
+                            <div
+                                className="
+                                    mb-1.5
+                                    text-center
+
+                                    sm:mb-2
+                                "
+                            >
                                 <span
                                     className="
                                         text-[8px]
@@ -424,20 +467,19 @@ const ComingSoonHero = ({ config }) => {
                             </div>
 
                             <CountdownTimer
-                                targetTime={
-                                    config.startTime
-                                }
+                                targetTime={config.startTime}
                             />
                         </div>
 
-                        {/* INFO */}
+                        {/* Tournament Info */}
                         <div
                             className="
                                 mx-auto
-                                mt-2.5
+                                mt-3
+                                w-full
                                 max-w-3xl
 
-                                sm:mt-3
+                                sm:mt-4
                             "
                         >
                             <TournamentInfo
@@ -445,14 +487,14 @@ const ComingSoonHero = ({ config }) => {
                             />
                         </div>
 
-                        {/* CTA */}
+                        {/* Facebook CTA */}
                         <div
                             className="
-                                mt-3
+                                mt-4
                                 flex
                                 justify-center
 
-                                sm:mt-4
+                                sm:mt-5
                             "
                         >
                             <FacebookButton
@@ -461,10 +503,7 @@ const ComingSoonHero = ({ config }) => {
                         </div>
                     </div>
                 </section>
-
-                
             </div>
-
         </main>
     );
 };

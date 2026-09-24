@@ -11,26 +11,33 @@ const ClubLogo = ({ club }) => {
                 items-center
             "
         >
+            {/* Logo */}
             <div
                 className="
                     flex
-                    h-16 w-16
+                    h-16
+                    w-16
+                    shrink-0
                     items-center
                     justify-center
                     rounded-2xl
-                    border border-white/10
+                    border
+                    border-white/10
                     bg-white
                     p-2
                     shadow-xl
                     shadow-black/20
 
-                    sm:h-24 sm:w-24
+                    sm:h-24
+                    sm:w-24
                     sm:rounded-3xl
                     sm:p-3
 
-                    md:h-28 md:w-28
+                    md:h-28
+                    md:w-28
 
-                    lg:h-32 lg:w-32
+                    lg:h-32
+                    lg:w-32
                     lg:p-4
                 "
             >
@@ -46,10 +53,13 @@ const ClubLogo = ({ club }) => {
                 />
             </div>
 
+            {/* Club Name */}
             <h2
                 className="
                     mt-2
-                    max-w-[100px]
+                    max-w-[110px]
+                    break-words
+                    px-1
                     text-center
                     text-[11px]
                     font-bold
@@ -63,6 +73,8 @@ const ClubLogo = ({ club }) => {
                     md:max-w-[180px]
                     md:text-base
 
+                    lg:mt-4
+                    lg:max-w-[220px]
                     lg:text-lg
                 "
             >
@@ -87,41 +99,54 @@ const ClubMatchup = ({
                 justify-center
                 gap-2
 
-                sm:gap-6
-                md:gap-8
+                sm:gap-5
+
+                md:gap-7
+
                 lg:gap-10
             "
         >
+            {/* Home Club */}
             <ClubLogo club={homeClub} />
 
+            {/* VS */}
             <div
                 className="
                     flex
                     shrink-0
                     flex-col
                     items-center
+                    justify-center
                 "
             >
                 <div
                     className="
                         flex
-                        h-8 w-8
+                        h-8
+                        w-8
+                        shrink-0
                         items-center
                         justify-center
                         rounded-full
-                        border border-white/10
+                        border
+                        border-white/10
                         bg-white/[0.06]
                         text-white/50
                         backdrop-blur-md
 
-                        sm:h-11 sm:w-11
-                        md:h-12 md:w-12
+                        sm:h-11
+                        sm:w-11
+
+                        md:h-12
+                        md:w-12
                     "
                 >
                     <FiShield
                         className="
                             text-sm
+
                             sm:text-base
+
                             md:text-lg
                         "
                     />
@@ -130,6 +155,7 @@ const ClubMatchup = ({
                 <span
                     className="
                         mt-1
+                        whitespace-nowrap
                         text-[9px]
                         font-black
                         tracking-[0.2em]
@@ -137,6 +163,7 @@ const ClubMatchup = ({
 
                         sm:mt-2
                         sm:text-xs
+
                         md:text-sm
                     "
                 >
@@ -144,6 +171,7 @@ const ClubMatchup = ({
                 </span>
             </div>
 
+            {/* Opponent Club */}
             <ClubLogo club={opponentClub} />
         </div>
     );

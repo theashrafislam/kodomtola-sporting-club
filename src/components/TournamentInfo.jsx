@@ -33,6 +33,7 @@ const TournamentInfo = ({ config }) => {
         <div
             className="
                 grid
+                w-full
                 grid-cols-2
                 gap-1.5
 
@@ -47,59 +48,74 @@ const TournamentInfo = ({ config }) => {
                     <div
                         key={key}
                         className="
-        min-w-0
-        rounded-xl
-        border border-white/10
-        bg-white/[0.045]
-        px-3
-        py-2.5
+                            min-w-0
+                            overflow-hidden
+                            rounded-xl
+                            border
+                            border-white/10
+                            bg-white/[0.045]
+                            px-3
+                            py-2.5
 
-        sm:rounded-2xl
-        sm:px-4
-        sm:py-3
+                            sm:rounded-2xl
+                            sm:px-4
+                            sm:py-3
 
-        md:px-5
-        md:py-3.5
-    "
+                            md:px-5
+                            md:py-3.5
+                        "
                     >
+                        {/* Label */}
                         <div
                             className="
-            flex
-            items-center
-            gap-1.5
+                                flex
+                                min-w-0
+                                items-center
+                                gap-1.5
+                                text-[8px]
+                                font-semibold
+                                text-white/40
 
-            text-[8px]
-            font-semibold
-            text-white/40
+                                sm:text-[10px]
 
-            sm:text-[10px]
-            md:text-xs
-        "
+                                md:text-xs
+                            "
                         >
                             <Icon
                                 className="
-                shrink-0
-                text-amber-400
-            "
+                                    h-3
+                                    w-3
+                                    shrink-0
+                                    text-amber-400
+
+                                    sm:h-3.5
+                                    sm:w-3.5
+
+                                    md:h-4
+                                    md:w-4
+                                "
                             />
 
-                            <span>
+                            <span className="truncate">
                                 {label}
                             </span>
                         </div>
 
+                        {/* Value */}
                         <p
                             className="
-            mt-1
+                                mt-1
+                                min-w-0
+                                truncate
+                                text-[10px]
+                                font-bold
+                                leading-tight
+                                text-white
 
-            text-[10px]
-            font-bold
-            leading-tight
-            text-white
+                                sm:text-xs
 
-            sm:text-xs
-            md:text-sm
-        "
+                                md:text-sm
+                            "
                             title={config[key]}
                         >
                             {config[key]}
