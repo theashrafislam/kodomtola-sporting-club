@@ -1,10 +1,12 @@
+import ComingSoonHero from "./components/ComingSoonHero"
+import tournamentConfig from "./config/tournamentConfig";
 
 function App() {
 
 
   return (
     <div>
-      hello
+      <ComingSoonHero config={tournamentConfig} />
     </div>
   )
 }
