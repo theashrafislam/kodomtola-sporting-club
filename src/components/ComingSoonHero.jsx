@@ -336,29 +336,34 @@ const ComingSoonHero = ({ config }) => {
                         <div className="mx-auto text-center">
                             <h1
                                 className="
-                                    px-1
-                                    text-2xl
-                                    font-black
-                                    leading-[1.08]
-                                    tracking-tight
+        mx-auto
+        w-full
+        px-1
+        text-center
+        text-2xl
+        font-black
+        leading-[1.2]
+        tracking-tight
 
-                                    sm:text-4xl
+        sm:text-4xl
+        sm:leading-[1.15]
 
-                                    md:text-5xl
+        md:text-5xl
 
-                                    lg:text-6xl
-                                "
+        lg:text-6xl
+    "
                             >
                                 আগামীকাল{" "}
                                 <span
                                     className="
-                                        bg-gradient-to-r
-                                        from-teal-300
-                                        via-cyan-200
-                                        to-white
-                                        bg-clip-text
-                                        text-transparent
-                                    "
+            inline
+            bg-gradient-to-r
+            from-teal-300
+            via-cyan-200
+            to-white
+            bg-clip-text
+            text-transparent
+        "
                                 >
                                     ডাবল বাইক
                                 </span>{" "}
