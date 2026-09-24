@@ -47,37 +47,40 @@ const TournamentInfo = ({ config }) => {
                     <div
                         key={key}
                         className="
-                            min-w-0
-                            rounded-xl
-                            border border-white/10
-                            bg-white/[0.045]
-                            px-2
-                            py-2
+        min-w-0
+        rounded-xl
+        border border-white/10
+        bg-white/[0.045]
+        px-3
+        py-2.5
 
-                            sm:rounded-2xl
-                            sm:px-3 sm:py-3
+        sm:rounded-2xl
+        sm:px-4
+        sm:py-3
 
-                            md:px-4 md:py-3
-                        "
+        md:px-5
+        md:py-3.5
+    "
                     >
                         <div
                             className="
-                                flex
-                                items-center
-                                gap-1.5
-                                text-[8px]
-                                font-semibold
-                                text-white/40
+            flex
+            items-center
+            gap-1.5
 
-                                sm:text-[10px]
-                                md:text-xs
-                            "
+            text-[8px]
+            font-semibold
+            text-white/40
+
+            sm:text-[10px]
+            md:text-xs
+        "
                         >
                             <Icon
                                 className="
-                                    shrink-0
-                                    text-amber-400
-                                "
+                shrink-0
+                text-amber-400
+            "
                             />
 
                             <span>
@@ -87,16 +90,16 @@ const TournamentInfo = ({ config }) => {
 
                         <p
                             className="
-                                mt-1
-                                truncate
-                                text-[10px]
-                                font-bold
-                                leading-tight
-                                text-white
+            mt-1
 
-                                sm:text-xs
-                                md:text-sm
-                            "
+            text-[10px]
+            font-bold
+            leading-tight
+            text-white
+
+            sm:text-xs
+            md:text-sm
+        "
                             title={config[key]}
                         >
                             {config[key]}

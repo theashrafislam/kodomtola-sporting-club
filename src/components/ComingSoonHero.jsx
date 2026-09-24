@@ -177,7 +177,7 @@ const ComingSoonHero = ({ config }) => {
                                     sm:text-[9px]
                                 "
                             >
-                                Official Club
+                                অফিসিয়াল ক্লাব
                             </p>
                         </div>
                     </div>
@@ -241,7 +241,7 @@ const ComingSoonHero = ({ config }) => {
                                 sm:tracking-[0.16em]
                             "
                         >
-                            Coming Soon
+                            আমরা আসছি শীঘ্রই
                         </span>
                     </div>
                 </header>
@@ -462,59 +462,9 @@ const ComingSoonHero = ({ config }) => {
                     </div>
                 </section>
 
-                {/* FOOTER */}
-                <footer
-                    className="
-                        flex
-                        shrink-0
-                        items-center
-                        justify-center
-                        pt-1
-                    "
-                >
-                    <div
-                        className="
-                            flex
-                            items-center
-                            gap-1.5
-                            text-[8px]
-                            font-medium
-                            text-white/20
-
-                            sm:text-[10px]
-                        "
-                    >
-                        <span>
-                            সবার জন্য শুভকামনা
-                        </span>
-
-                        <span>•</span>
-
-                        <span>
-                            মাঠে দেখা হবে
-                        </span>
-                    </div>
-                </footer>
+                
             </div>
 
-            {/* Desktop decorative indicator */}
-            <div
-                className="
-                    pointer-events-none
-                    absolute
-                    bottom-3
-                    left-1/2
-                    hidden
-                    -translate-x-1/2
-                    items-center
-                    gap-1
-                    text-white/15
-
-                    xl:flex
-                "
-            >
-                <FiArrowDown className="text-xs" />
-            </div>
         </main>
     );
 };
