@@ -333,67 +333,70 @@ const ComingSoonHero = ({ config }) => {
                         </div>
 
                         {/* Heading */}
-                        <div className="mx-auto text-center">
-                            <h1
-                                className="
-        mx-auto
-        w-full
-        px-1
-        text-center
-        text-2xl
-        font-black
-        leading-[1.2]
-        tracking-tight
+                        {/* Heading */}
+<div className="mx-auto text-center">
+    <h1
+        className="
+            mx-auto
+            w-full
+            px-1
+            text-center
+            text-2xl
+            font-black
+            leading-[1.2]
+            tracking-tight
 
-        sm:text-4xl
-        sm:leading-[1.15]
+            sm:text-4xl
+            sm:leading-[1.15]
 
-        md:text-5xl
-
-        lg:text-6xl
-    "
-                            >
-                                আগামীকাল{" "}
-                                <span
-                                    className="
-            inline
-            bg-gradient-to-r
-            from-teal-300
-            via-cyan-200
-            to-white
-            bg-clip-text
-            text-transparent
+            md:text-5xl
+            lg:text-6xl
         "
-                                >
-                                    ডাবল বাইক
-                                </span>{" "}
-                                টুর্নামেন্ট
-                            </h1>
+    >
+        আগামীকাল{" "}
 
-                            <p
-                                className="
-                                    mx-auto
-                                    mt-2
-                                    max-w-xl
-                                    px-2
-                                    text-[10px]
-                                    leading-4
-                                    text-white/50
+        <span
+            className="
+                text-cyan-200
 
-                                    sm:mt-2
-                                    sm:text-sm
-                                    sm:leading-6
+                sm:bg-gradient-to-r
+                sm:from-teal-300
+                sm:via-cyan-200
+                sm:to-white
+                sm:bg-clip-text
+                sm:text-transparent
+            "
+        >
+            ডাবল বাইক
+        </span>{" "}
 
-                                    md:text-base
-                                "
-                            >
-                                আমাদের সাথে{" "}
-                                <span className="font-bold text-white/80">
-                                    {config.opponentClub.name}
-                                </span>{" "}
-                                -এর জমজমাট ডাবল বাইক টুর্নামেন্ট।
-                            </p>
-                        </div>
+        টুর্নামেন্ট
+    </h1>
+
+    <p
+        className="
+            mx-auto
+            mt-2
+            max-w-xl
+            px-2
+            text-[10px]
+            leading-4
+            text-white/50
+
+            sm:mt-2
+            sm:text-sm
+            sm:leading-6
+
+            md:text-base
+        "
+    >
+        আমাদের সাথে{" "}
+        <span className="font-bold text-white/80">
+            {config.opponentClub.name}
+        </span>{" "}
+        -এর জমজমাট ডাবল বাইক টুর্নামেন্ট।
+    </p>
+</div>
 
                         {/* Matchup */}
                         <div
