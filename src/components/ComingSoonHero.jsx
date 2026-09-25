@@ -328,7 +328,7 @@ const ComingSoonHero = ({ config }) => {
                                     sm:tracking-[0.2em]
                                 "
                             >
-                                আসছে আগামীকাল
+                                আসছে আজ
                             </p>
                         </div>
 
@@ -353,7 +353,7 @@ const ComingSoonHero = ({ config }) => {
             lg:text-6xl
         "
     >
-        আগামীকাল{" "}
+        আজ{" "}
 
         <span
             className="
