@@ -74,9 +74,7 @@ const CountdownBox = ({ value, label }) => {
                     text-white
 
                     sm:text-2xl
-
                     md:text-3xl
-
                     lg:text-4xl
                 "
             >
@@ -93,12 +91,127 @@ const CountdownBox = ({ value, label }) => {
                     text-white/40
 
                     sm:text-[10px]
-
                     md:text-xs
                 "
             >
                 {label}
             </span>
+        </div>
+    );
+};
+
+const ScoreBoard = () => {
+    return (
+        <div
+            className="
+                mb-4
+                w-full
+                rounded-2xl
+                border
+                border-white/10
+                bg-white/[0.06]
+                p-3
+                backdrop-blur-md
+
+                sm:mb-5
+                sm:p-4
+            "
+        >
+            <div className="flex items-center justify-center gap-3 sm:gap-5">
+                
+                {/* Our Team */}
+                <div className="flex min-w-0 flex-1 flex-col items-center">
+                    <span
+                        className="
+                            max-w-full
+                            truncate
+                            text-center
+                            text-xs
+                            font-bold
+                            text-white/70
+
+                            sm:text-sm
+                            md:text-base
+                        "
+                    >
+                        কদমতলা
+                    </span>
+
+                    <span
+                        className="
+                            mt-1
+                            text-3xl
+                            font-black
+                            leading-none
+                            text-white
+
+                            sm:text-4xl
+                            md:text-5xl
+                        "
+                    >
+                        {toBanglaNumber(6)}
+                    </span>
+                </div>
+
+                {/* VS */}
+                <div
+                    className="
+                        flex
+                        h-9
+                        w-9
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border
+                        border-white/10
+                        bg-white/[0.08]
+                        text-[10px]
+                        font-black
+                        text-white/40
+
+                        sm:h-11
+                        sm:w-11
+                        sm:text-xs
+                    "
+                >
+                    VS
+                </div>
+
+                {/* Opponent */}
+                <div className="flex min-w-0 flex-1 flex-col items-center">
+                    <span
+                        className="
+                            max-w-full
+                            truncate
+                            text-center
+                            text-xs
+                            font-bold
+                            text-white/70
+
+                            sm:text-sm
+                            md:text-base
+                        "
+                    >
+                        রামচন্দ্রপুর
+                    </span>
+
+                    <span
+                        className="
+                            mt-1
+                            text-3xl
+                            font-black
+                            leading-none
+                            text-white
+
+                            sm:text-4xl
+                            md:text-5xl
+                        "
+                    >
+                        {toBanglaNumber(2)}
+                    </span>
+                </div>
+            </div>
         </div>
     );
 };
@@ -126,71 +239,80 @@ const CountdownTimer = ({ targetTime }) => {
     /* Match Started */
     if (!timeLeft) {
         return (
-            <div
-                className="
-                    w-full
-                    rounded-xl
-                    border
-                    border-amber-400/20
-                    bg-amber-400/10
-                    px-4
-                    py-3
-                    text-center
-                    backdrop-blur-md
+            <div className="w-full">
+                <ScoreBoard />
 
-                    sm:rounded-2xl
-                    sm:px-6
-                    sm:py-4
-                "
-            >
-                <p
+                <div
                     className="
-                        text-lg
-                        font-black
-                        leading-tight
-                        text-amber-300
+                        w-full
+                        rounded-xl
+                        border
+                        border-amber-400/20
+                        bg-amber-400/10
+                        px-4
+                        py-3
+                        text-center
+                        backdrop-blur-md
 
-                        sm:text-2xl
+                        sm:rounded-2xl
+                        sm:px-6
+                        sm:py-4
                     "
                 >
-                    খেলা শুরু হয়ে গেছে! 🏆
-                </p>
+                    <p
+                        className="
+                            text-lg
+                            font-black
+                            leading-tight
+                            text-amber-300
+
+                            sm:text-2xl
+                        "
+                    >
+                        খেলা শুরু হয়ে গেছে! 🏆
+                    </p>
+                </div>
             </div>
         );
     }
 
     return (
-        <div
-            className="
-                grid
-                w-full
-                grid-cols-4
-                gap-1.5
+        <div className="w-full">
+            {/* Score */}
+            <ScoreBoard />
 
-                sm:gap-2
+            {/* Countdown */}
+            <div
+                className="
+                    grid
+                    w-full
+                    grid-cols-4
+                    gap-1.5
 
-                md:gap-3
-            "
-        >
-            <CountdownBox
-                value={timeLeft.days}
-                label="দিন"
-            />
+                    sm:gap-2
+                    md:gap-3
+                "
+            >
+                <CountdownBox
+                    value={timeLeft.days}
+                    label="দিন"
+                />
 
-            <CountdownBox
-                value={timeLeft.hours}
-                label="ঘণ্টা"
-            />
+                <CountdownBox
+                    value={timeLeft.hours}
+                    label="ঘণ্টা"
+                />
 
-            <CountdownBox
-                value={timeLeft.minutes}
-                label="মিনিট"
-            />
+                <CountdownBox
+                    value={timeLeft.minutes}
+                    label="মিনিট"
+                />
 
-            <CountdownBox
-                value={timeLeft.seconds}
-                label="সেকেন্ড"
-            />
+                <CountdownBox
+                    value={timeLeft.seconds}
+                    label="সেকেন্ড"
+                />
+            </div>
         </div>
     );
 };
