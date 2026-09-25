@@ -242,36 +242,7 @@ const CountdownTimer = ({ targetTime }) => {
             <div className="w-full">
                 <ScoreBoard />
 
-                <div
-                    className="
-                        w-full
-                        rounded-xl
-                        border
-                        border-amber-400/20
-                        bg-amber-400/10
-                        px-4
-                        py-3
-                        text-center
-                        backdrop-blur-md
-
-                        sm:rounded-2xl
-                        sm:px-6
-                        sm:py-4
-                    "
-                >
-                    <p
-                        className="
-                            text-lg
-                            font-black
-                            leading-tight
-                            text-amber-300
-
-                            sm:text-2xl
-                        "
-                    >
-                        খেলা শুরু হয়ে গেছে! 🏆
-                    </p>
-                </div>
+                
             </div>
         );
     }
